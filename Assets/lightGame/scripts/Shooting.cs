@@ -7,7 +7,7 @@ public class Shooting : MonoBehaviour
 {
     public GameObject LightProjectile;
     public Transform spawnTransform;
-    public RawImage forceBar;
+    public Image forceBar;
     public RawImage barOutline;
     public float force = 1000;
 
@@ -15,7 +15,7 @@ public class Shooting : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        barOutline.enabled = false;
     }
 
     // Update is called once per frame
@@ -31,9 +31,16 @@ public class Shooting : MonoBehaviour
             Debug.Log(force);
             force = 1000f;
 
+            barOutline.enabled = false;
 
         }
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            barOutline.enabled = true;
+        }
 
+
+        SetForceUI();
        
 
     }
@@ -47,6 +54,13 @@ public class Shooting : MonoBehaviour
             force += 40;
         }
     }
+
+    void SetForceUI()
+    {
+        forceBar.fillAmount = (force - 1000) / 3000;
+        print("working");
+    }
+
 
 
 }

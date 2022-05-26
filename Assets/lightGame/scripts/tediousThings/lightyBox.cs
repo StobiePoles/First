@@ -1,21 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class lightyBox : MonoBehaviour
 {
-    public GameObject Black;
-    public GameObject Yellow;
     public ParticleSystem Cheer;
     public bool play = false;
-
-    public GameObject button;
+    public bool startTimer;
+    float x = 5;
 
     // Start is called before the first frame update
     void Start()
     {
-        Black.SetActive(true);
-        Yellow.SetActive(false);
         Cheer.Stop();
         
     }
@@ -23,23 +20,44 @@ public class lightyBox : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (play)
+        if (play == true)
+            startTimer = true;
+
+
+        if(startTimer == true)
+            x = x - Time.deltaTime;
+
+
+
+        if (play == true)
         {
             Cheer.Play();
+            
+            
+
+
+            play = false;
+        }
+        if (x < 0)
+        {
+            Debug.Log("working");
+            SceneManager.LoadScene("SampleScene");
         }
     }
 
-
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "asamawahanwanhamdo")
+        if (collision.gameObject.tag == "ball")
         {
-            Debug.Log("working");
-            Black.SetActive(false);
-            Yellow.SetActive(true);
+
             play = true;
-            button.transform.position += new Vector3(0.1f, 0, 0);
+
+            
         }
+
+
+
+
     }
 
 
