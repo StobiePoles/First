@@ -8,6 +8,10 @@ TagManager:
   - asamawahanwanhamdo
   - button
   - ball
+  - runny
+  - runnyRight
+  - runnyLeft
+  - RunnableWall
   layers:
   - Default
   - TransparentFX

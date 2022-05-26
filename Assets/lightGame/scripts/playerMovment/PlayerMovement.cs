@@ -6,6 +6,8 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour {
 
 
+    public bool OnWall = false;
+    private Vector3 playerPosition;
     public float enitialTurn;
 
 
@@ -73,6 +75,14 @@ public class PlayerMovement : MonoBehaviour {
     private void Update() {
         MyInput();
         Look();
+        if(OnWall)
+        {
+            moveSpeed = 5000;
+        }
+        else
+        {
+            moveSpeed = 500;
+        }
     }
 
     /// <summary>
@@ -153,6 +163,11 @@ public class PlayerMovement : MonoBehaviour {
     }
 
     private void Jump() {
+
+
+       // rb.useGravity = true;
+
+
         if (grounded && readyToJump) {
             readyToJump = false;
 
@@ -274,10 +289,49 @@ public class PlayerMovement : MonoBehaviour {
             cancellingGrounded = true;
             Invoke(nameof(StopGrounded), Time.deltaTime * delay);
         }
+
+
+
+        if (other.gameObject.tag == "runnyLeft" || other.gameObject.tag == "runnyRight")
+        {
+          //  rb.useGravity = false;
+            rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
+
+
+        }
+
+        if (other.gameObject.tag == "runnyLeft")
+        {
+            //Vector3 euler = playerCam.transform.localRotation.eulerAngles;
+            //playerCam.transform.localRotation = Quaternion.Euler(euler.x, euler.y, -15);
+            //orientation.transform.localRotation = Quaternion.Euler(0, 0, 0);
+        }
+
+        if (other.gameObject.tag == "runnyRight")
+        {
+            //Vector3 euler = playerCam.transform.localRotation.eulerAngles;
+            //playerCam.transform.localRotation = Quaternion.Euler(euler.x, euler.y, 15);
+            //orientation.transform.localRotation = Quaternion.Euler(0 ,0, 0);
+        }
+
     }
 
     private void StopGrounded() {
         grounded = false;
     }
-    
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "RunnableWall")
+            OnWall = true;
+    }
+
+
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.tag == "RunnableWall")
+            OnWall = false;
+    }
+
+
 }
