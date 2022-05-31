@@ -59,7 +59,7 @@ public class WallRunning : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.transform.CompareTag("RunnableWall"))
+        if (collision.transform.CompareTag("RunnableWall")|| collision.transform.CompareTag("RunnableWall2"))
         {
             isWallRunning = true;
             rb.useGravity = false;
@@ -76,7 +76,7 @@ public class WallRunning : MonoBehaviour
     }
     private void OnCollisionStay(Collision collision)
     {
-        if (collision.transform.CompareTag("RunnableWall"))
+        if (collision.transform.CompareTag("RunnableWall") || collision.transform.CompareTag("RunnableWall2"))
         {
             if (Input.GetKey(KeyCode.Space) && isLeftWall)
             {
@@ -93,7 +93,7 @@ public class WallRunning : MonoBehaviour
     private void OnCollisionExit(Collision collision)
     {
 
-        if (collision.transform.CompareTag("RunnableWall"))
+        if (collision.transform.CompareTag("RunnableWall") || collision.transform.CompareTag("RunnableWall2"))
         {
             //cam.transform.localEulerAngles = new Vector3(0f, 0f, 0f);
             isWallRunning = false;

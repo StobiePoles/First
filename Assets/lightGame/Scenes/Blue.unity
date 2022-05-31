@@ -9558,12 +9558,7 @@ MonoBehaviour:
   Cheer: {fileID: 1467474290}
   play: 0
   startTimer: 0
-  blue: 1
-  red: 0
-  purple: 0
-  blueCompleted: 0
-  redCompleted: 0
-  purpleCompleted: 0
+  WhatLevel: Blue
 --- !u!1001 &1486066301
 PrefabInstance:
   m_ObjectHideFlags: 0

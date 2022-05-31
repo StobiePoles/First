@@ -6,6 +6,9 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour {
 
 
+    public bool extraFetures = true;
+
+
     public bool OnWall = false;
     private Vector3 playerPosition;
     public float enitialTurn;
@@ -74,15 +77,32 @@ public class PlayerMovement : MonoBehaviour {
 
     private void Update() {
         MyInput();
-        Look();
-        if(OnWall)
+        Look(); 
+        if(extraFetures)
         {
-            moveSpeed = 5000;
+            if(Input.GetKeyDown(KeyCode.E))
+            {
+                Invertate();
+            }
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+                LookFlip();
+            }
+
+            if (OnWall)
+            {
+                moveSpeed = 5000;
+            }
+            else
+            {
+                moveSpeed = 500;
+            }
+
         }
-        else
-        {
-            moveSpeed = 500;
-        }
+
+
+
+
     }
 
     /// <summary>
@@ -261,6 +281,35 @@ public class PlayerMovement : MonoBehaviour {
         return angle < maxSlopeAngle;
     }
 
+
+    void Invertate()
+    {
+        playerCam.transform.localRotation = Quaternion.Euler(xRotation, desiredX + 180, 0);
+        orientation.transform.localRotation = Quaternion.Euler(0, desiredX, 0);
+
+        //rb.velocity = -rb.velocity;
+        rb.velocity += new Vector3(-rb.velocity.x * 2, 0, -rb.velocity.z * 2);
+
+    }
+
+    void LookFlip()
+    {
+        playerCam.transform.localRotation = Quaternion.Euler(xRotation, desiredX + 180, 0);
+        orientation.transform.localRotation = Quaternion.Euler(0, desiredX + 180, 0);
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
     private bool cancellingGrounded;
     
     /// <summary>
@@ -298,20 +347,6 @@ public class PlayerMovement : MonoBehaviour {
             rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
 
 
-        }
-
-        if (other.gameObject.tag == "runnyLeft")
-        {
-            //Vector3 euler = playerCam.transform.localRotation.eulerAngles;
-            //playerCam.transform.localRotation = Quaternion.Euler(euler.x, euler.y, -15);
-            //orientation.transform.localRotation = Quaternion.Euler(0, 0, 0);
-        }
-
-        if (other.gameObject.tag == "runnyRight")
-        {
-            //Vector3 euler = playerCam.transform.localRotation.eulerAngles;
-            //playerCam.transform.localRotation = Quaternion.Euler(euler.x, euler.y, 15);
-            //orientation.transform.localRotation = Quaternion.Euler(0 ,0, 0);
         }
 
     }

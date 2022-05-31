@@ -5660,12 +5660,7 @@ MonoBehaviour:
   Cheer: {fileID: 546349533}
   play: 0
   startTimer: 0
-  blue: 0
-  red: 1
-  purple: 0
-  blueCompleted: 0
-  redCompleted: 0
-  purpleCompleted: 0
+  WhatLevel: Red
 --- !u!65 &546349535
 BoxCollider:
   m_ObjectHideFlags: 0

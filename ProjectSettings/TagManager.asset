@@ -12,6 +12,7 @@ TagManager:
   - runnyRight
   - runnyLeft
   - RunnableWall
+  - RunnableWall2
   layers:
   - Default
   - TransparentFX

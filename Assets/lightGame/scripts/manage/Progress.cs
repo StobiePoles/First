@@ -12,9 +12,9 @@ public class Progress : MonoBehaviour
     public Material red;
     public Material purple;
 
-    public bool blueCompleted;
-    public bool redCompleted;
-    public bool purpleCompleted;
+    public bool blueCompleted = false;
+    public bool redCompleted = false;
+    public bool purpleCompleted = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +25,7 @@ public class Progress : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Checking();
+      //  Checking();
         if(blueCompleted)
         {
             BlueTree.GetComponent<Renderer>().material = blue;
@@ -46,10 +46,10 @@ public class Progress : MonoBehaviour
 
     void Checking()
     {
-        if (lightyBox.blue == true)
+        if (lightyBox.blueCompleted == true)
         {
             blueCompleted = true;
-        }
+        }/*
         if (lightyBox.red == true)
         {
             redCompleted = true;
@@ -59,6 +59,6 @@ public class Progress : MonoBehaviour
             purpleCompleted = true;
         }
 
-
+*/
     }
 }
