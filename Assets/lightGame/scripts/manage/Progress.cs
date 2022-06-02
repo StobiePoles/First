@@ -12,13 +12,26 @@ public class Progress : MonoBehaviour
     public Material red;
     public Material purple;
 
-    public bool blueCompleted = false;
-    public bool redCompleted = false;
-    public bool purpleCompleted = false;
+    public Light blueLight;
+    public Light redLight;
+    public Light purpleLight;
+
+    public static int Lives = 3;
+
+    public GameObject heart1;
+    public GameObject heart2;
+    public GameObject heart3;
+
+    
+
+
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        blueLight.gameObject.SetActive(false);
+        redLight.gameObject.SetActive(false);
+        purpleLight.gameObject.SetActive(false);
 
     }
 
@@ -26,18 +39,53 @@ public class Progress : MonoBehaviour
     void Update()
     {
       //  Checking();
-        if(blueCompleted)
+        if(lightyBox.blueCompleted == true)
         {
             BlueTree.GetComponent<Renderer>().material = blue;
+            blueLight.gameObject.SetActive(true);
         }
-        if (redCompleted)
+        if (lightyBox.redCompleted == true)
         {
             RedTree.GetComponent<Renderer>().material = red;
+            redLight.gameObject.SetActive(true);
         }
-        if (purpleCompleted)
+        if (lightyBox.purpleCompleted == true)
         {
+            
             PurpleTree.GetComponent<Renderer>().material = purple;
+            purpleLight.gameObject.SetActive(true);
         }
+
+        switch (Lives)
+        {
+            case 3:
+                heart1.gameObject.SetActive(true);
+                heart2.gameObject.SetActive(true);
+                heart3.gameObject.SetActive(true);
+                break;
+
+            case 2:
+                heart1.gameObject.SetActive(true);
+                heart2.gameObject.SetActive(true);
+                heart3.gameObject.SetActive(false);
+
+            break;
+            case 1:
+                heart1.gameObject.SetActive(true);
+                heart2.gameObject.SetActive(false);
+                heart3.gameObject.SetActive(false);
+                break;
+
+            default:
+
+                heart1.gameObject.SetActive(false);
+                heart2.gameObject.SetActive(false);
+                heart3.gameObject.SetActive(false);
+                break;
+
+        }
+
+
 
 
 
@@ -46,19 +94,7 @@ public class Progress : MonoBehaviour
 
     void Checking()
     {
-        if (lightyBox.blueCompleted == true)
-        {
-            blueCompleted = true;
-        }/*
-        if (lightyBox.red == true)
-        {
-            redCompleted = true;
-        }
-        if (lightyBox.purple == true)
-        {
-            purpleCompleted = true;
-        }
 
-*/
+
     }
 }

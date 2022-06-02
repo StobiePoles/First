@@ -10,6 +10,7 @@ public class Collisions : MonoBehaviour
         if (collision.gameObject.tag == "ded")
         {
                 SceneManager.LoadScene("SampleScene");
+            Progress.Lives--;
         }
     }
 }

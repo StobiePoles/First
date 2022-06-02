@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour {
 
 
     public bool extraFetures = true;
+    public bool WallRunning = true;
 
 
     public bool OnWall = false;
@@ -99,6 +100,8 @@ public class PlayerMovement : MonoBehaviour {
             }
 
         }
+
+
 
 
 
@@ -359,6 +362,7 @@ public class PlayerMovement : MonoBehaviour {
     {
         if (collision.gameObject.tag == "RunnableWall")
             OnWall = true;
+
     }
 
 

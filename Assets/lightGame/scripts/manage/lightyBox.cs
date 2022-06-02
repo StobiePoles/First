@@ -9,9 +9,9 @@ public class lightyBox : MonoBehaviour
     public bool play = false;
     public bool startTimer;
     float x = 5;
-    public static bool ThisBlue = false;
-    public static bool ThisRed = false;
-    public static bool ThisPurple = false;
+    public bool ThisBlue = false;
+    public bool ThisRed = false;
+    public bool ThisPurple = false;
     public static bool blueCompleted = false;
     public static bool redCompleted = false;
     public static bool purpleCompleted = false;
@@ -50,13 +50,13 @@ public class lightyBox : MonoBehaviour
                 Debug.Log("blue");
             }
                 
-            if(ThisRed)
+            else if(ThisRed)
             {
                 redCompleted = true;
                 Debug.Log("red");
             }
             
-            if (ThisPurple)
+            else if (ThisPurple)
             {
                 purpleCompleted = true;
                 Debug.Log("purple");
