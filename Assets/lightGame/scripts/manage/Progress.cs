@@ -22,7 +22,9 @@ public class Progress : MonoBehaviour
     public GameObject heart2;
     public GameObject heart3;
 
-    
+    public static bool finished = false;
+
+
 
 
 
@@ -38,7 +40,10 @@ public class Progress : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      //  Checking();
+        Debug.Log(Lives);
+
+
+        Checking();
         if(lightyBox.blueCompleted == true)
         {
             BlueTree.GetComponent<Renderer>().material = blue;
@@ -94,7 +99,8 @@ public class Progress : MonoBehaviour
 
     void Checking()
     {
-
+        if(lightyBox.blueCompleted == true && lightyBox.redCompleted == true && lightyBox.purpleCompleted == true)
+            finished = true;
 
     }
 }
