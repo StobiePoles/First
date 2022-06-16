@@ -17,4 +17,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/lightGame/Scenes/Red.unity
     guid: a3176791991bc6d488a1b693ec7ea277
+  - enabled: 1
+    path: Assets/lightGame/Scenes/turorial/wallRunTut.unity
+    guid: e73da948698a46142b68e64d85d6acbf
+  - enabled: 1
+    path: Assets/lightGame/Scenes/turorial/grappleTut.unity
+    guid: 0e46c3e394b17854782dcc9bfe42e935
+  - enabled: 1
+    path: Assets/lightGame/Scenes/turorial/InverseTut.unity
+    guid: 1cf44d3675a7f5448bc1ce291df0d834
+  - enabled: 1
+    path: Assets/lightGame/Scenes/turorial/lightTut.unity
+    guid: e63b9c71ad2f8fe4b83d417bf7866903
   m_configObjects: {}

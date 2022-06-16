@@ -8,7 +8,7 @@ public class grappleHook : MonoBehaviour
     private Vector3 grapplePoint;
     public LayerMask whatIsGrapple;
     public Transform gunTip, camera, player;
-    private float maxDistance = 200f;
+    private float maxDistance = 100f;
     private SpringJoint joint;
 
     void Awake()
@@ -19,7 +19,7 @@ public class grappleHook : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        DrawRope();
+
 
 
         if(Input.GetMouseButtonDown(1))
@@ -30,6 +30,10 @@ public class grappleHook : MonoBehaviour
         {
             StopGrapple();
         }
+    }
+    private void LateUpdate()
+    {
+        DrawRope();
     }
     void StartGrapple()
     {   
@@ -43,12 +47,12 @@ public class grappleHook : MonoBehaviour
 
             float distanceFromPoint = Vector3.Distance(player.position, grapplePoint);
 
-            joint.maxDistance = distanceFromPoint * 0.8f;
+            joint.maxDistance = distanceFromPoint * 0.5f;
             joint.minDistance = distanceFromPoint * 0.25f;
 
 
-            joint.spring = 35f;
-            joint.damper = 7f;
+            joint.spring = 3f;
+            joint.damper = 4f;
             joint.massScale = 0.5f;
 
             lr.positionCount = 2;

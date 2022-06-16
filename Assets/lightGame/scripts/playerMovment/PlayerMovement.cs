@@ -4,8 +4,6 @@ using System;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour {
-
-
     public bool extraFetures = true;
     public bool WallRunning = true;
 
@@ -100,7 +98,6 @@ public class PlayerMovement : MonoBehaviour {
             }
 
         }
-
 
 
 
@@ -370,7 +367,11 @@ public class PlayerMovement : MonoBehaviour {
     {
         if (collision.gameObject.tag == "RunnableWall")
             OnWall = false;
+
+
+        if (collision.gameObject.tag == "boosterUp")
+        {
+            rb.AddForce(1000 * Vector3.up * Time.fixedDeltaTime, ForceMode.Impulse);
+        }
     }
-
-
 }

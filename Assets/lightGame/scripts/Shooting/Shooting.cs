@@ -10,6 +10,7 @@ public class Shooting : MonoBehaviour
     public Image forceBar;
     public RawImage barOutline;
     public float force = 1000;
+    public float possableRange;
 
 
     // Start is called before the first frame update
@@ -35,6 +36,8 @@ public class Shooting : MonoBehaviour
 
             barOutline.enabled = false;
 
+            HandleProjectile handleProjectile = temp2.GetComponent<HandleProjectile>();
+            handleProjectile.possableRange = force;
         }
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
