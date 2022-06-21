@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 1736894269260457859}
   - component: {fileID: 7872102601938713452}
   - component: {fileID: 2452505283439212922}
+  - component: {fileID: 7962968163435879457}
   m_Layer: 7
   m_Name: lightShooter
   m_TagString: ball
@@ -173,7 +174,7 @@ SphereCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1139275999371057446}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: a82699c2376eb0742814686ad3d0df39, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -193,6 +194,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectileLife: 5
   ball: {fileID: 0}
+  light: {fileID: 0}
+  possableRange: 0
 --- !u!114 &1736894269260457859
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -278,7 +281,7 @@ ParticleSystem:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-  moveWithTransform: 0
+  moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
   randomSeed: 0
@@ -4987,3 +4990,19 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &7962968163435879457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1139275999371057446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a2ea74ff26696a4f911fa446297d327, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Intensity: 1
+  Mass: 1
+  stiffness: 0.5
+  damping: 0.75

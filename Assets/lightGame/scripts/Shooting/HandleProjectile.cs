@@ -10,6 +10,16 @@ public class HandleProjectile : MonoBehaviour
     public Light light;
     public float possableRange;
 
+
+
+
+    Rigidbody rb; 
+
+    void Awake()
+    {
+        rb = GetComponent<Rigidbody>();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,19 +34,32 @@ public class HandleProjectile : MonoBehaviour
 
         light.range = possableRange / 10; 
 
+        timerStuff();
 
+
+
+    }
+    void timerStuff()
+    {
         timer += Time.deltaTime;
-        if (timer > .8f)
-        {
-            Destroy(GetComponent<Rigidbody>());
-        }
+        
 
 
         if (timer >= projectileLife || Input.GetKeyDown(KeyCode.R))
         {
+
+            rb.isKinematic = false;
+        }
+        else if (timer > .8f)
+        {
+            rb.isKinematic = true;
+        }
+
+
+        if (timer >= projectileLife + 10)
+        { 
             Destroy(gameObject);
         }
 
     }
-
 }
