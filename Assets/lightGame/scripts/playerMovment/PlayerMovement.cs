@@ -122,6 +122,12 @@ public class PlayerMovement : MonoBehaviour {
     }
 
     private void StartCrouch() {
+        if (SignCollisions.onceCrouch == false)
+        {
+            SignCollisions.onceCrouch = true;
+            SignCollisions.number++;
+        }
+
         transform.localScale = crouchScale;
         transform.position = new Vector3(transform.position.x, transform.position.y - 0.5f, transform.position.z);
         if (rb.velocity.magnitude > 0.5f) {
@@ -183,9 +189,13 @@ public class PlayerMovement : MonoBehaviour {
     }
 
     private void Jump() {
+        if (SignCollisions.onceJump == false)
+        {
+            SignCollisions.onceJump = true;
+            SignCollisions.number++;
+        }
 
-
-       // rb.useGravity = true;
+        // rb.useGravity = true;
 
 
         if (grounded && readyToJump) {

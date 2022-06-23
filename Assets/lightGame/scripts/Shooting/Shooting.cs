@@ -27,6 +27,14 @@ public class Shooting : MonoBehaviour
 
         if (Input.GetKeyUp(KeyCode.Mouse0))
         {
+            if (SignCollisions.onceShoot == false)
+            {
+                SignCollisions.onceShoot = true;
+                SignCollisions.number++;
+            }
+
+
+
             GameObject temp2 = Instantiate(LightProjectile, spawnTransform.position, spawnTransform.rotation);
             temp2.GetComponent<Rigidbody>().AddForce(temp2.transform.forward * force / 2);
             temp2.GetComponent<Rigidbody>().AddForce(temp2.transform.up * -250);

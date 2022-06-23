@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
  public class tutorialProgress : MonoBehaviour
 {
     public string CurrentLevel;
+    public GameObject final;
 
 
     // Start is called before the first frame update
@@ -17,7 +18,11 @@ using UnityEngine.SceneManagement;
     // Update is called once per frame
     void Update()
     {
-        
+        if (ShootingRange.score == 7)
+       {
+            final.SetActive(true);
+       }
+
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -45,6 +50,9 @@ using UnityEngine.SceneManagement;
                 break;
             case "grapple":
                 SceneManager.LoadScene("SampleScene");
+                break;
+            case "first":
+                SceneManager.LoadScene("lightTut");
                 break;
 
 
