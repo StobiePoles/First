@@ -369,7 +369,13 @@ public class PlayerMovement : MonoBehaviour {
     {
         if (collision.gameObject.tag == "RunnableWall")
             OnWall = true;
+        if (collision.gameObject.tag == "TPMeUpCheif")
+        {
+            Debug.Log("chummy");
+            transform.position = new Vector3(-30, 13, -10);
+            rb.velocity = new Vector3(0,0,0);
 
+        }
     }
 
 
@@ -381,7 +387,8 @@ public class PlayerMovement : MonoBehaviour {
 
         if (collision.gameObject.tag == "boosterUp")
         {
-            rb.AddForce(1000 * Vector3.up * Time.fixedDeltaTime, ForceMode.Impulse);
+            rb.AddForce(1500 * Vector3.up * Time.fixedDeltaTime, ForceMode.Impulse);
         }
+
     }
 }

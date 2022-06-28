@@ -32,4 +32,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/lightGame/Scenes/turorial/basicMovementTut.unity
     guid: 74cab190c9dedcb4a8a89486eeb4627d
+  - enabled: 1
+    path: Assets/lightGame/Scenes/Menu/Menu.unity
+    guid: b761cbc388bdd1841873a256a7e6da32
+  - enabled: 1
+    path: Assets/lightGame/Scenes/Menu/LevelSelect.unity
+    guid: 67d979af68ad36448a351ceb45bfe520
   m_configObjects: {}

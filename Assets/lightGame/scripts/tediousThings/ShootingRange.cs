@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class ShootingRange : MonoBehaviour
 {
-    bool start = false;
+    float DistructionTimer = 5f;
     public static float score = 0;
     bool hit = false;
+    private Rigidbody rb;
 
     // Start is called before the first frame update
     void Start()
@@ -14,25 +15,28 @@ public class ShootingRange : MonoBehaviour
         
     }
 
-    // Update is called once per frame
-    void FixedUpdate()
+    private void Update()
     {
-        if(start == true)
+        if(hit)
         {
-            transform.position += new Vector3(0, -0.05f, 0);
+            DistructionTimer -= Time.deltaTime;
         }
-        Debug.Log(score);
+        if(DistructionTimer <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
+
+
+    // Update is called once per frame
+
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "ball")
         {
-            start = true;
-            if(hit == false)
-            {
-                hit = true;
-                score++;
-            }
+            gameObject.GetComponent<Rigidbody>().useGravity = true;
+            hit = true;
+            score++;
 
         }
     }
