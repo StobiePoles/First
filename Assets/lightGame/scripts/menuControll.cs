@@ -33,4 +33,32 @@ public class menuControll : MonoBehaviour
 
     }
 
+    public void Basic()
+    {
+        SceneManager.LoadScene("BasicMovementTut");
+    }
+    public void Light()
+    {
+        SceneManager.LoadScene("LightTut");
+    }
+    public void wall()
+    {
+        SceneManager.LoadScene("WallRunTut");
+    }
+    public void invercing()
+    {
+        SceneManager.LoadScene("InverseTut");
+    }
+    public void grappling()
+    {
+        SceneManager.LoadScene("grappleTut");
+    }
+
+
+
+
+
+
+
+
 }

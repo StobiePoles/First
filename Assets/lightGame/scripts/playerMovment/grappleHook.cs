@@ -19,10 +19,19 @@ public class grappleHook : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        RaycastHit hit;
+        if (Physics.Raycast(camera.position, camera.forward, out hit, maxDistance, whatIsGrapple))
+        {
+            Debug.Log("on");
+            //make green
+        }
+        else if (!Physics.Raycast(camera.position, camera.forward, out hit, maxDistance, whatIsGrapple))
+        {
+            Debug.Log("off");
+            //make red
+        }
 
-
-        if(Input.GetMouseButtonDown(1))
+            if (Input.GetMouseButtonDown(1))
         {
             StartGrapple();
         }

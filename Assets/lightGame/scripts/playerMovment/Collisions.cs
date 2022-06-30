@@ -9,6 +9,15 @@ public class Collisions : MonoBehaviour
     private void Update()
     {
         nonBull -= Time.deltaTime;
+
+        if(Input.GetKeyDown(KeyCode.P))
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+            SceneManager.LoadScene("Menu");
+        }
+
+
     }
 
     void OnCollisionEnter(Collision collision)

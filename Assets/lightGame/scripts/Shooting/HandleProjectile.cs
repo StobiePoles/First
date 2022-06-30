@@ -45,7 +45,7 @@ public class HandleProjectile : MonoBehaviour
         
 
 
-        if (timer >= projectileLife || Input.GetKeyDown(KeyCode.R))
+        if (timer >= projectileLife)
         {
 
             rb.isKinematic = false;
@@ -56,7 +56,7 @@ public class HandleProjectile : MonoBehaviour
         }
 
 
-        if (timer >= projectileLife + 10)
+        if (timer >= projectileLife + 10 || Input.GetKeyDown(KeyCode.R))
         { 
             Destroy(gameObject);
         }

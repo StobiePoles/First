@@ -49,7 +49,9 @@ using UnityEngine.SceneManagement;
                 SceneManager.LoadScene("grappleTut");
                 break;
             case "grapple":
-                SceneManager.LoadScene("SampleScene");
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
+                SceneManager.LoadScene("Menu");
                 break;
             case "first":
                 SceneManager.LoadScene("lightTut");
