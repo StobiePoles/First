@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Progress : MonoBehaviour
 {
@@ -12,10 +13,6 @@ public class Progress : MonoBehaviour
     public Material red;
     public Material purple;
 
-    public Light blueLight;
-    public Light redLight;
-    public Light purpleLight;
-
     public static int Lives = 3;
 
     public GameObject heart1;
@@ -24,42 +21,37 @@ public class Progress : MonoBehaviour
 
     public static bool finished = false;
 
-
+    public GameObject GroundPortal;
+    public GameObject GroundPortalTrigger;
 
 
 
     // Start is called before the first frame update
     void Start()
     {
-        blueLight.gameObject.SetActive(false);
-        redLight.gameObject.SetActive(false);
-        purpleLight.gameObject.SetActive(false);
+
+        GroundPortal.gameObject.SetActive(false);
+        GroundPortalTrigger.gameObject.SetActive(false);
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(Lives);
+        if(finished == false)
+        {
+            GroundPortal.gameObject.SetActive(false);
+            GroundPortalTrigger.gameObject.SetActive(false);
+        }
+        else if (finished == true)
+        {
+            GroundPortal.gameObject.SetActive(true);
+            GroundPortalTrigger.gameObject.SetActive(true);
+        }
 
 
         Checking();
-        if(lightyBox.blueCompleted == true)
-        {
-            BlueTree.GetComponent<Renderer>().material = blue;
-            blueLight.gameObject.SetActive(true);
-        }
-        if (lightyBox.redCompleted == true)
-        {
-            RedTree.GetComponent<Renderer>().material = red;
-            redLight.gameObject.SetActive(true);
-        }
-        if (lightyBox.purpleCompleted == true)
-        {
-            
-            PurpleTree.GetComponent<Renderer>().material = purple;
-            purpleLight.gameObject.SetActive(true);
-        }
+       
 
         switch (Lives)
         {
@@ -86,6 +78,12 @@ public class Progress : MonoBehaviour
                 heart1.gameObject.SetActive(false);
                 heart2.gameObject.SetActive(false);
                 heart3.gameObject.SetActive(false);
+
+                SceneManager.LoadScene("deathScene");
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
+                Lives = 3;
+
                 break;
 
         }

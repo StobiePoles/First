@@ -17,18 +17,36 @@ public class menuControll : MonoBehaviour
     {
         
     }
+
+    public void GetMeTheHellOutOfHere()
+    {
+
+        Application.Quit();
+        Debug.Log("End Game");
+    }
+
+
+    public void ToStartignMenu()
+    {
+        SceneManager.LoadScene("Menu");
+
+    }    
+    public void About()
+    {
+        SceneManager.LoadScene("aboutScene");
+
+    }
     public void ToLevels()
     {
         SceneManager.LoadScene("SampleScene");
-        Debug.Log("worked cheif");
     }
     public void ToTut()
-    {        Debug.Log("worked cheif");
+    {     
         SceneManager.LoadScene("BasicMovementTut");
 
     }
     public void ToLevelSelect()
-    {        Debug.Log("worked cheif");
+    {
         SceneManager.LoadScene("LevelSelect");
 
     }

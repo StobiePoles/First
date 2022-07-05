@@ -56211,6 +56211,8 @@ MonoBehaviour:
   gunTip: {fileID: 2094414289}
   camera: {fileID: 1374187224}
   player: {fileID: 404429863}
+  green: {fileID: 0}
+  red: {fileID: 0}
 --- !u!120 &753393093
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -56614,7 +56616,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: hit Q or E to inverse all momentem and do a 180
+  m_Text: hit E to reverse all momentum and Q just to do a 180
 --- !u!222 &1028592262
 CanvasRenderer:
   m_ObjectHideFlags: 0

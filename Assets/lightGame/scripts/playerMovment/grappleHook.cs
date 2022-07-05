@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class grappleHook : MonoBehaviour
 {
@@ -11,9 +12,20 @@ public class grappleHook : MonoBehaviour
     private float maxDistance = 100f;
     private SpringJoint joint;
 
+
+    public Image green;
+    public Image red;
+
     void Awake()
     {
         lr = GetComponent<LineRenderer>();
+    }
+
+
+    private void Start()
+    {
+        red.enabled = true;
+        green.enabled = false;
     }
 
     // Update is called once per frame
@@ -23,12 +35,19 @@ public class grappleHook : MonoBehaviour
         if (Physics.Raycast(camera.position, camera.forward, out hit, maxDistance, whatIsGrapple))
         {
             Debug.Log("on");
-            //make green
+
+            green.enabled = true;
+            red.enabled = false;
+
+
         }
         else if (!Physics.Raycast(camera.position, camera.forward, out hit, maxDistance, whatIsGrapple))
         {
             Debug.Log("off");
-            //make red
+
+            red.enabled = true;
+            green.enabled = false;
+
         }
 
             if (Input.GetMouseButtonDown(1))
@@ -65,7 +84,7 @@ public class grappleHook : MonoBehaviour
             joint.massScale = 0.5f;
 
             lr.positionCount = 2;
-
+           // PlayerMovement.grounded = true; try and add a grounded affect when hit grapple
         }
     }
     void DrawRope()

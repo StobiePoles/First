@@ -12,6 +12,7 @@ public class lightyBox : MonoBehaviour
     public bool ThisBlue = false;
     public bool ThisRed = false;
     public bool ThisPurple = false;
+    public bool ThisOrange = false;
     public static bool blueCompleted = false;
     public static bool redCompleted = false;
     public static bool purpleCompleted = false;
@@ -60,6 +61,10 @@ public class lightyBox : MonoBehaviour
             {
                 purpleCompleted = true;
                 Debug.Log("purple");
+            }
+            else if (ThisOrange)
+            {
+                SceneManager.LoadScene("Menu");
             }
                 
         }
