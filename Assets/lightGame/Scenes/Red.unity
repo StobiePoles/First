@@ -582,7 +582,7 @@ GameObject:
   - component: {fileID: 432040808}
   m_Layer: 0
   m_Name: Cube (6)
-  m_TagString: RunnableWall
+  m_TagString: RunnableWall2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6344,7 +6344,7 @@ GameObject:
   - component: {fileID: 1490323012}
   m_Layer: 0
   m_Name: Cube (4)
-  m_TagString: RunnableWall
+  m_TagString: RunnableWall2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6590,6 +6590,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4c75b5bc1c1ddc43ac9473ad6774e3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  WallLookVaritaion: 15
   extraFetures: 0
   WallRunning: 1
   OnWall: 0
@@ -6699,6 +6700,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6af60756a2c237c4e860fcf2323f82fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Side: 
   _wallRunUpForce: 3
   _wallRunPushForce: 3
   cam: {fileID: 50305255}

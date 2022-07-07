@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class WallRunning : MonoBehaviour
 {
+    public string Side;
+
+
+
+
     [SerializeField] private float _wallRunUpForce;
     [SerializeField] private float _wallRunPushForce;
     //<<Summary>> Boolean that is used for adding forces when jumping off the walls, used to determine which direction.
@@ -29,16 +34,22 @@ public class WallRunning : MonoBehaviour
         RaycastHit rightRaycast;
         RaycastHit leftRaycast;
 
-        if (Physics.Raycast(head.transform.position, head.transform.right, out rightRaycast))
+        if (Physics.Raycast(head.transform.position, head.transform.right, out rightRaycast, 1))
         {
             distanceFromRightWall = Vector3.Distance(head.transform.position, rightRaycast.point);
             if (distanceFromRightWall <= 10f)
             {
                 isRightWall = true;
                 isLeftWall = false;
+
+            }
+            else
+            {
+                isRightWall = false;
+                PlayerMovement.WallRunSide = 3;
             }
         }
-        if (Physics.Raycast(head.transform.position, -head.transform.right, out leftRaycast))
+        else if (Physics.Raycast(head.transform.position, -head.transform.right, out leftRaycast, 1))
         {
             distanceFromLeftWall = Vector3.Distance(head.transform.position, leftRaycast.point);
             if (distanceFromLeftWall <= 10f)
@@ -46,13 +57,38 @@ public class WallRunning : MonoBehaviour
                 isRightWall = false;
                 isLeftWall = true;
             }
+            else
+            {
+                isLeftWall = false;
+                PlayerMovement.WallRunSide = 3;
+            }
         }
-
+        else
+        {
+            isRightWall = false;
+            isLeftWall = false;
+            PlayerMovement.WallRunSide = 3;
+        }
     }
 
     private void Update()
     {
         wallChecker();
+
+        if (isRightWall)
+        {
+            PlayerMovement.WallRunSide = 1;
+        }
+        else if (isLeftWall)
+        {
+            PlayerMovement.WallRunSide = 2;
+        }
+        else
+        {
+            PlayerMovement.WallRunSide = 3;
+
+        }
+
     }
 
 
@@ -64,15 +100,17 @@ public class WallRunning : MonoBehaviour
             isWallRunning = true;
             rb.useGravity = false;
 
-            if (isLeftWall)
-            {
-              //  cam.transform.localEulerAngles = new Vector3(0f, 0f, -10f);
-            }
-            if (isRightWall)
-            {
-               // cam.transform.localEulerAngles = new Vector3(0f, 0f, 10f);
-            }
         }
+       /* if (collision.transform.CompareTag("RunnableWall"))
+        {
+            Side = "left";
+        }
+        else if (collision.transform.CompareTag("RunnableWall2"))
+        {
+            Side = "right";
+        }
+       */
+
     }
     private void OnCollisionStay(Collision collision)
     {
@@ -98,6 +136,8 @@ public class WallRunning : MonoBehaviour
             //cam.transform.localEulerAngles = new Vector3(0f, 0f, 0f);
             isWallRunning = false;
             rb.useGravity = true;
+
+
         }
     }
 }

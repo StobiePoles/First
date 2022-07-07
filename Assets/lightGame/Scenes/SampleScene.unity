@@ -53208,10 +53208,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4c75b5bc1c1ddc43ac9473ad6774e3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  WallLookVaritaion: 10
   extraFetures: 0
   WallRunning: 0
   OnWall: 0
-  enitialTurn: 180
+  enitialTurn: 90
   playerCam: {fileID: 963194228}
   playerObjects: {fileID: 0}
   playerObjects2: {fileID: 0}

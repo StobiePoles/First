@@ -4,6 +4,13 @@ using System;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour {
+
+
+    public static int WallRunSide = 3;
+    public float WallLookVaritaion = 10;
+
+
+
     public bool extraFetures = true;
     public bool WallRunning = true;
 
@@ -98,8 +105,6 @@ public class PlayerMovement : MonoBehaviour {
             }
 
         }
-
-
 
 
 
@@ -235,7 +240,28 @@ public class PlayerMovement : MonoBehaviour {
         xRotation = Mathf.Clamp(xRotation, -90f, 90f);
 
         //Perform the rotations
-        playerCam.transform.localRotation = Quaternion.Euler(xRotation, desiredX, 0);
+
+        switch (WallRunSide)
+        {
+            case 1:
+                playerCam.transform.localRotation = Quaternion.Euler(xRotation, desiredX,   WallLookVaritaion);
+                break;
+
+            case 2:
+                playerCam.transform.localRotation = Quaternion.Euler(xRotation, desiredX, 0 - WallLookVaritaion);
+                break;
+
+
+            case 3:
+
+                playerCam.transform.localRotation = Quaternion.Euler(xRotation, desiredX, 0);
+                break;
+
+        }
+
+
+
+
         orientation.transform.localRotation = Quaternion.Euler(0, desiredX, 0);
 
         //playerObjects.transform.localRotation = Quaternion.Euler(xRotation, 0, 0);
@@ -365,6 +391,9 @@ public class PlayerMovement : MonoBehaviour {
         grounded = false;
     }
 
+
+
+
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "RunnableWall")
@@ -376,6 +405,12 @@ public class PlayerMovement : MonoBehaviour {
             rb.velocity = new Vector3(0,0,0);
 
         }
+
+        if (collision.gameObject.tag == "boosterUp")
+        {
+            rb.AddForce(1500 * Vector3.up * Time.fixedDeltaTime, ForceMode.Impulse);
+        }
+
     }
 
 
@@ -385,10 +420,7 @@ public class PlayerMovement : MonoBehaviour {
             OnWall = false;
 
 
-        if (collision.gameObject.tag == "boosterUp")
-        {
-            rb.AddForce(1500 * Vector3.up * Time.fixedDeltaTime, ForceMode.Impulse);
-        }
+
 
     }
 }

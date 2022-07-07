@@ -74,7 +74,15 @@ public class menuControll : MonoBehaviour
 
 
 
-
+    public void RestartGame()
+    {
+        Progress.Lives = 3;
+        Progress.finished = false;
+        lightyBox.blueCompleted = false;
+        lightyBox.redCompleted = false;
+        lightyBox.purpleCompleted = false;
+        SceneManager.LoadScene("Menu");
+    }
 
 
 

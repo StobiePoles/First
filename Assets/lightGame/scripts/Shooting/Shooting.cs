@@ -39,7 +39,6 @@ public class Shooting : MonoBehaviour
             temp2.GetComponent<Rigidbody>().AddForce(temp2.transform.forward * force / 2);
             temp2.GetComponent<Rigidbody>().AddForce(temp2.transform.up * -250);
 
-            Debug.Log(force);
             force = 1000f;
 
             barOutline.enabled = false;

@@ -50,4 +50,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/lightGame/Scenes/Menu/deathScene.unity
     guid: 98d1165bf57bb08469bc6ae7f00f7d30
+  - enabled: 1
+    path: Assets/lightGame/Scenes/Menu/WinningScene.unity
+    guid: 2f5e4b55a05365544bcfd297819e2a20
   m_configObjects: {}

@@ -31,6 +31,8 @@ public class lightyBox : MonoBehaviour
             ThisRed = true;
         if (WhatLevel == "Purple")
             ThisPurple = true;
+        if(WhatLevel == "orange")
+            ThisOrange = true;
 
     }
 
@@ -64,7 +66,9 @@ public class lightyBox : MonoBehaviour
             }
             else if (ThisOrange)
             {
-                SceneManager.LoadScene("Menu");
+                SceneManager.LoadScene("WinningScene");
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
             }
                 
         }
@@ -87,7 +91,6 @@ public class lightyBox : MonoBehaviour
         }
         if (x < 0)
         {
-            Debug.Log("working");
             SceneManager.LoadScene("SampleScene");
         }
     }

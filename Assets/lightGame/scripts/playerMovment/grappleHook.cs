@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class grappleHook : MonoBehaviour
 {
+
     private LineRenderer lr;
     private Vector3 grapplePoint;
     public LayerMask whatIsGrapple;
@@ -31,10 +32,12 @@ public class grappleHook : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+
+
         RaycastHit hit;
         if (Physics.Raycast(camera.position, camera.forward, out hit, maxDistance, whatIsGrapple))
         {
-            Debug.Log("on");
 
             green.enabled = true;
             red.enabled = false;
@@ -43,14 +46,13 @@ public class grappleHook : MonoBehaviour
         }
         else if (!Physics.Raycast(camera.position, camera.forward, out hit, maxDistance, whatIsGrapple))
         {
-            Debug.Log("off");
 
             red.enabled = true;
             green.enabled = false;
 
         }
 
-            if (Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButtonDown(1))
         {
             StartGrapple();
         }
