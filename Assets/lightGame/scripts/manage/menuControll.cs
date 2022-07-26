@@ -72,6 +72,26 @@ public class menuControll : MonoBehaviour
         SceneManager.LoadScene("grappleTut");
     }
 
+    public void Blue()
+    {
+        SceneManager.LoadScene("Blue");
+    }
+    public void Red()
+    {
+        SceneManager.LoadScene("Red");
+    }
+    public void Purple()
+    {
+        SceneManager.LoadScene("Purple");
+    }
+
+    public void Orange()
+    {
+        SceneManager.LoadScene("orange");
+    }
+
+
+
 
 
     public void RestartGame()

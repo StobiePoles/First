@@ -1178,6 +1178,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WallLookVaritaion: 15
+  tilt: 1
   extraFetures: 0
   WallRunning: 1
   OnWall: 0

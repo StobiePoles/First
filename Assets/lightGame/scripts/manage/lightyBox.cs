@@ -8,7 +8,7 @@ public class lightyBox : MonoBehaviour
     public ParticleSystem Cheer;
     public bool play = false;
     public bool startTimer;
-    float x = 5;
+    float x = 2;
     public bool ThisBlue = false;
     public bool ThisRed = false;
     public bool ThisPurple = false;
@@ -50,19 +50,16 @@ public class lightyBox : MonoBehaviour
             if(ThisBlue)
             {
                 blueCompleted = true;
-                Debug.Log("blue");
             }
                 
             else if(ThisRed)
             {
                 redCompleted = true;
-                Debug.Log("red");
             }
             
             else if (ThisPurple)
             {
                 purpleCompleted = true;
-                Debug.Log("purple");
             }
             else if (ThisOrange)
             {

@@ -28,7 +28,7 @@ public class FLticks : MonoBehaviour
     void Update()
     {
         switch (SignCollisions.number)
-        {
+        { 
             case 0:
                 text.text = "hello and welcome to my wizard boy game";
                 break;
@@ -56,7 +56,7 @@ public class FLticks : MonoBehaviour
                 break;
 
             case 6:
-                text.text = "nice shot!";
+                text.text = "nice shot! Shoot the cube to proceed to the next stage";
                 wallThree.SetActive(false);
                 tickThree.enabled = true;
                 break;

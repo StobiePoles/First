@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour {
 
     public static int WallRunSide = 3;
     public float WallLookVaritaion = 10;
+    public bool tilt = false;
 
 
 
@@ -240,24 +241,33 @@ public class PlayerMovement : MonoBehaviour {
         xRotation = Mathf.Clamp(xRotation, -90f, 90f);
 
         //Perform the rotations
-
-        switch (WallRunSide)
+        if(tilt == true)
         {
-            case 1:
-                playerCam.transform.localRotation = Quaternion.Euler(xRotation, desiredX,   WallLookVaritaion);
-                break;
+            switch (WallRunSide)
+            {
+                case 1:
+                    playerCam.transform.localRotation = Quaternion.Euler(xRotation, desiredX,   WallLookVaritaion);
+                    break;
+            
+                case 2:
+                    playerCam.transform.localRotation = Quaternion.Euler(xRotation, desiredX, 0 - WallLookVaritaion);
+                    break;
+            
+            
+                case 3:
+            
+                    playerCam.transform.localRotation = Quaternion.Euler(xRotation, desiredX, 0);
+                    break;
+            
+            }
+        }
+        else
+        {
 
-            case 2:
-                playerCam.transform.localRotation = Quaternion.Euler(xRotation, desiredX, 0 - WallLookVaritaion);
-                break;
-
-
-            case 3:
-
-                playerCam.transform.localRotation = Quaternion.Euler(xRotation, desiredX, 0);
-                break;
+            playerCam.transform.localRotation = Quaternion.Euler(xRotation, desiredX, 0);
 
         }
+
 
 
 

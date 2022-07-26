@@ -17,6 +17,7 @@ public class ShootingRange : MonoBehaviour
 
     private void Update()
     {
+        Debug.Log(score);
         if(hit)
         {
             DistructionTimer -= Time.deltaTime;
@@ -35,8 +36,12 @@ public class ShootingRange : MonoBehaviour
         if (collision.gameObject.tag == "ball")
         {
             gameObject.GetComponent<Rigidbody>().useGravity = true;
+
+            if(hit == false)
+            {
+                score++;
+            }
             hit = true;
-            score++;
 
         }
     }

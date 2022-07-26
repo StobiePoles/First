@@ -757,6 +757,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WallLookVaritaion: 10
+  tilt: 0
   extraFetures: 1
   WallRunning: 1
   OnWall: 0
@@ -889,7 +890,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 125.70001, y: -60.600006}
-  m_SizeDelta: {x: 188.41, y: 66.3}
+  m_SizeDelta: {x: 188.41, y: 98.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &538163109
 MonoBehaviour:
