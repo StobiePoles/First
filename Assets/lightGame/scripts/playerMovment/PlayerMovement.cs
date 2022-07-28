@@ -6,6 +6,9 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour {
 
 
+    public static bool WantToStopHook = false;
+
+
     public static int WallRunSide = 3;
     public float WallLookVaritaion = 10;
     public bool tilt = false;
@@ -107,7 +110,7 @@ public class PlayerMovement : MonoBehaviour {
 
         }
 
-
+        WantToStopHook = false;
 
     }
 
@@ -410,10 +413,26 @@ public class PlayerMovement : MonoBehaviour {
             OnWall = true;
         if (collision.gameObject.tag == "TPMeUpCheif")
         {
-            Debug.Log("chummy");
             transform.position = new Vector3(-30, 13, -10);
             rb.velocity = new Vector3(0,0,0);
 
+
+            playerCam.transform.localRotation = Quaternion.Euler(0, enitialTurn, 0);
+            orientation.transform.localRotation = Quaternion.Euler(0, enitialTurn, 0);
+
+        }
+
+        if (collision.gameObject.tag == "tpUpGrappTut")
+        {
+            transform.position = new Vector3(-61.92f, 7.56f, 0);
+            rb.velocity = new Vector3(0, 0, 0);
+
+
+            playerCam.transform.localRotation = Quaternion.Euler(0, enitialTurn, 0);
+            orientation.transform.localRotation = Quaternion.Euler(0, enitialTurn, 0);
+
+
+            WantToStopHook = true;
         }
 
         if (collision.gameObject.tag == "boosterUp")

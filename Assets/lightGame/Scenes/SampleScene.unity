@@ -10340,7 +10340,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh63912
+  m_Name: pb_Mesh131106
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -10504,7 +10504,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh63958
+  m_Name: pb_Mesh131162
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -10751,7 +10751,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 374887852}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.02, y: 6.06, z: -12.11}
+  m_LocalPosition: {x: 0.02, y: 6.06, z: -11.8}
   m_LocalScale: {x: 1, y: 19.057, z: 19.652}
   m_Children: []
   m_Father: {fileID: 0}
@@ -11687,7 +11687,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh63822
+  m_Name: pb_Mesh131004
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -42375,7 +42375,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh63850
+  m_Name: pb_Mesh131032
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -42687,7 +42687,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh63810
+  m_Name: pb_Mesh130992
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -43106,7 +43106,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1614105492}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.87, y: 6.06, z: -1.46}
+  m_LocalPosition: {x: -9.21, y: 6.06, z: -1.69}
   m_LocalScale: {x: 1, y: 20.044, z: 19.652}
   m_Children: []
   m_Father: {fileID: 0}
@@ -53209,6 +53209,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WallLookVaritaion: 10
+  tilt: 0
   extraFetures: 0
   WallRunning: 0
   OnWall: 0
@@ -53437,7 +53438,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh63690
+  m_Name: pb_Mesh130864
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2

@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Collisions : MonoBehaviour
 {
-    public float nonBull = 5;
+    public float nonBull = 1;
     private void Update()
     {
         nonBull -= Time.deltaTime;

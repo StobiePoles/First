@@ -349,7 +349,7 @@ GameObject:
   - component: {fileID: 208387476}
   - component: {fileID: 208387475}
   - component: {fileID: 208387474}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Plane (3)
   m_TagString: ded
   m_Icon: {fileID: 0}
@@ -520,7 +520,7 @@ GameObject:
   - component: {fileID: 319021014}
   - component: {fileID: 319021013}
   - component: {fileID: 319021012}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Plane
   m_TagString: ded
   m_Icon: {fileID: 0}
@@ -616,7 +616,7 @@ GameObject:
   - component: {fileID: 627689512}
   - component: {fileID: 627689511}
   - component: {fileID: 627689510}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Plane (2)
   m_TagString: ded
   m_Icon: {fileID: 0}
@@ -1343,7 +1343,7 @@ GameObject:
   - component: {fileID: 961254658}
   - component: {fileID: 961254657}
   - component: {fileID: 961254656}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Plane (6)
   m_TagString: ded
   m_Icon: {fileID: 0}
@@ -1439,7 +1439,7 @@ GameObject:
   - component: {fileID: 1138191697}
   - component: {fileID: 1138191696}
   - component: {fileID: 1138191695}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Plane (4)
   m_TagString: ded
   m_Icon: {fileID: 0}
@@ -1535,7 +1535,7 @@ GameObject:
   - component: {fileID: 1179408882}
   - component: {fileID: 1179408881}
   - component: {fileID: 1179408880}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Plane (1)
   m_TagString: ded
   m_Icon: {fileID: 0}
@@ -1731,7 +1731,7 @@ GameObject:
   - component: {fileID: 1267929205}
   - component: {fileID: 1267929204}
   - component: {fileID: 1267929203}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Plane (7)
   m_TagString: ded
   m_Icon: {fileID: 0}
@@ -6802,10 +6802,10 @@ RectTransform:
   m_Father: {fileID: 786859047}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 734, y: 197.32703}
-  m_SizeDelta: {x: 356.72, y: 10}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 178, y: -61.4}
+  m_SizeDelta: {x: 356.71997, y: 10}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &1480430840
 MonoBehaviour:
@@ -7031,7 +7031,7 @@ GameObject:
   - component: {fileID: 1684543628}
   - component: {fileID: 1684543627}
   - component: {fileID: 1684543626}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Plane (5)
   m_TagString: ded
   m_Icon: {fileID: 0}

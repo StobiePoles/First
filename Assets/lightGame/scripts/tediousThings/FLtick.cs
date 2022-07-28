@@ -37,12 +37,12 @@ public class FLticks : MonoBehaviour
                 SignCollisions.onceJump = false;
                 break;
             case 2:
-                text.text = "good job, you can more on to the next sign";
+                text.text = "good job, you can move onto the next sign";
                 tickOne.enabled = true;
                 wallOne.SetActive(false);
                 break;
             case 3:
-                text.text = "try and crouch for me using the control or C key";
+                text.text = "try and crouch for me using the control";
                 SignCollisions.onceCrouch = false;
                 break;
             case 4:

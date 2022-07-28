@@ -129,7 +129,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh39472
+  m_Name: pb_Mesh114890
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -839,7 +839,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: e2174fe8c1e9203409aed121aa1a0691, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -972,8 +972,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1009811321}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.3457, y: 13.1032, z: -5.01}
-  m_LocalScale: {x: 59.17947, y: 54.062386, z: 1}
+  m_LocalPosition: {x: 11.8216, y: 13.1032, z: -5.01}
+  m_LocalScale: {x: 66.13306, y: 54.062386, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
@@ -3435,10 +3435,10 @@ RectTransform:
   m_Father: {fileID: 1951518573}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 734, y: 197.32703}
-  m_SizeDelta: {x: 356.72, y: 10}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 178, y: -61.4}
+  m_SizeDelta: {x: 356.71997, y: 10}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &1719777047
 MonoBehaviour:

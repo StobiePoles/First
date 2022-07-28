@@ -30,7 +30,6 @@ using UnityEngine.SceneManagement;
         if(collision.gameObject.tag == "ball")
         {
             goToNext();
-            Debug.Log("oahsdfjlasfhasfhlashfksaf");
         }
     }
 

@@ -60,6 +60,15 @@ public class grappleHook : MonoBehaviour
         {
             StopGrapple();
         }
+
+
+
+
+        if (PlayerMovement.WantToStopHook == true)
+        {
+            StopGrapple();
+        }
+
     }
     private void LateUpdate()
     {
@@ -96,7 +105,7 @@ public class grappleHook : MonoBehaviour
         lr.SetPosition(1,grapplePoint);
     }
 
-    void StopGrapple()
+    public void StopGrapple()
     {
         lr.positionCount = 0;
         Destroy(joint);

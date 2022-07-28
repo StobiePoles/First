@@ -1061,10 +1061,10 @@ RectTransform:
   m_Father: {fileID: 1111960165}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 734, y: 197.32703}
-  m_SizeDelta: {x: 356.72, y: 10}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 178, y: -61.4}
+  m_SizeDelta: {x: 356.71997, y: 10}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &947067205
 MonoBehaviour:
@@ -1220,6 +1220,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WallLookVaritaion: 10
+  tilt: 0
   extraFetures: 1
   WallRunning: 1
   OnWall: 0

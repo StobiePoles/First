@@ -1440,7 +1440,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'developer note:
 
-    normaly here there would only be the option to play
+    normally here there would only be the option to play
     all the levels but since they might be too hard, you can chose what level you
     would like to try. However, this is only for if you get stuck, otherwise try
     play though normaly.
@@ -2056,7 +2056,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: basic Movment tutorial
+  m_Text: basic Movement tutorial
 --- !u!222 &1305099618
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2767,7 +2767,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Story levels
+  m_Text: Play all story levels
 --- !u!222 &1929894608
 CanvasRenderer:
   m_ObjectHideFlags: 0

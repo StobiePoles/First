@@ -17,6 +17,7 @@ TagManager:
   - NewWord
   - boosterUp
   - TPMeUpCheif
+  - tpUpGrappTut
   layers:
   - Default
   - TransparentFX
